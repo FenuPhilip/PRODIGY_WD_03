@@ -21,6 +21,7 @@ function handleCellClick(event) {
     if (board[index] === '' && isGameActive) {
         board[index] = currentPlayer;
         event.target.textContent = currentPlayer;
+        event.target.style.color = currentPlayer === 'X' ? '#3f51b5' : '#ff5722';
         checkResult();
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
     }
